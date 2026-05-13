@@ -20,14 +20,40 @@ export default function StartupHubPage() {
   return (
     <div className="container-luxury space-y-10 py-10">
       <FadeIn className="card-luxury p-8 md:p-10">
-        <p className="text-sm uppercase tracking-[0.2em] text-[#7b1e1e]">Khởi nghiệp</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-[#0B8CB4]">Khởi nghiệp</p>
         <h1 className="mt-2 text-4xl md:text-5xl">Chuyên mục Khởi nghiệp – Kinh doanh</h1>
         <p className="mt-4 max-w-3xl text-[#5c4033]/85">
           Kết nối di sản làng nghề với mô hình kinh doanh bền vững, phù hợp học sinh – sinh viên và người trẻ muốn khởi nghiệp tại Huế.
         </p>
+        <p className="mt-3 max-w-3xl text-sm text-[#5c4033]/85">
+          Quy trình, tài liệu và chatbot hỗ trợ bạn hình thành ý tưởng kinh doanh phù hợp.
+        </p>
+        <div className="relative mt-6 aspect-video w-full max-w-3xl overflow-hidden rounded-lg border border-[#c8dce8] bg-black shadow-sm ring-1 ring-[#0B8CB4]/12">
+          <iframe
+            className="absolute inset-0 size-full"
+            src="https://www.youtube.com/embed/QLAsmB68m7I"
+            title="Video chuyên mục khởi nghiệp"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+        <p className="mt-2 max-w-3xl text-xs text-[#5c4033]/65">
+          Xem trên{" "}
+          <a
+            href="https://www.youtube.com/watch?v=QLAsmB68m7I"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-md border border-[#cfe8f0] bg-[#f4fafc] px-2 py-0.5 font-medium text-[#0B8CB4] underline-offset-2 transition hover:border-[#a8d4e8] hover:bg-white hover:underline"
+          >
+            YouTube
+          </a>
+          .
+        </p>
         <Link
           href="/chatbot-khoi-nghiep"
-          className="mt-6 inline-flex rounded-full bg-[#0f3d3e] px-6 py-3 text-sm font-medium text-[#f5efe6]"
+          className="mt-6 inline-flex rounded-full bg-[#0B8CB4] px-6 py-3 text-sm font-medium text-[#f5efe6] transition hover:bg-[#086b8d]"
         >
           Mở Chatbot khởi nghiệp
         </Link>

@@ -71,7 +71,7 @@ export default function GalleryPage() {
 
       <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
         {filtered.map((item, i) => (
-          <div key={item.title} className="card-luxury mb-4 break-inside-avoid overflow-hidden p-3">
+          <div key={item.image} className="card-luxury mb-4 break-inside-avoid overflow-hidden p-3">
             <div className={`relative overflow-hidden rounded-2xl ${i % 3 === 0 ? "h-56" : "h-72"}`}>
               <Image
                 src={item.image}
@@ -156,7 +156,7 @@ export default function GalleryPage() {
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
               {filtered.map((thumb, idx) => (
                 <button
-                  key={`${thumb.title}-${idx}`}
+                  key={thumb.image}
                   type="button"
                   className={`relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border ${idx === selectedIndex ? "border-[#c8a96b]" : "border-white/20"}`}
                   onClick={() => {

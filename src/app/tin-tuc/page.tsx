@@ -16,9 +16,12 @@ export default function NewsPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         {events.map((item, idx) => (
           <FadeIn key={item.title} delay={idx * 0.08} className="card-luxury p-6">
-            <p className="text-xs tracking-[0.2em] text-[#7b1e1e]">{item.date}</p>
+            <p className="text-xs tracking-[0.2em] text-[#7b1e1e]">
+              {item.day} {item.month} · {item.dateRange}
+            </p>
             <h2 className="mt-2 text-3xl">{item.title}</h2>
             <p className="mt-2 text-[#5c4033]/80">{item.location}</p>
+            <p className="mt-2 text-sm text-[#5c4033]/75">{item.description}</p>
             <div className="mt-4 h-px w-full bg-[#d9c8b2]" />
             <p className="mt-4 text-sm text-[#5c4033]/70">Timeline sự kiện được cập nhật liên tục để du khách dễ dàng theo dõi và đăng ký tham dự.</p>
           </FadeIn>

@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { MainFooter } from "@/components/layout/main-footer";
 import { MainNavbar } from "@/components/layout/main-navbar";
+import { ScrollToTopButton } from "@/components/layout/scroll-to-top-button";
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
@@ -17,9 +18,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Làng Nghề Huế | Giữ hồn di sản, chạm vào tinh hoa",
+  title: "Hue Craft Village | Làng nghề truyền thống Huế",
   description:
-    "Website văn hoá du lịch Làng Nghề Huế - hành trình khám phá tinh hoa truyền thống, trải nghiệm nghề thủ công và kết nối thế hệ trẻ.",
+    "Hue Craft Village — khám phá làng nghề cố đô, trải nghiệm văn hóa, thư viện ảnh và định hướng nghề nghiệp.",
 };
 
 export default function RootLayout({
@@ -36,6 +37,7 @@ export default function RootLayout({
         <MainNavbar />
         <main className="pt-16 lg:pt-20">{children}</main>
         <MainFooter />
+        <ScrollToTopButton />
       </body>
     </html>
   );

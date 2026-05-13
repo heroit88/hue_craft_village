@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Kích hoạt chế độ xuất tĩnh
+  // Xuất tĩnh → thư mục `out/`. HTML dùng đường dẫn dạng `/_next/...` (gốc website).
+  // Mở `index.html` bằng double-click (file://) sẽ KHÔNG tải được CSS/JS — cần chạy server
+  // tĩnh trên `out` (vd. `npm run preview:export`) hoặc deploy lên host có HTTP.
   output: 'export',
   images: {
     unoptimized: true,

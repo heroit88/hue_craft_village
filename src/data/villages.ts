@@ -17,7 +17,7 @@ export const villages: Village[] = [
     slug: "lang-huong-thuy-xuan",
     name: "Làng hương Thủy Xuân",
     category: "Hương truyền thống",
-    image: "/images/villages/lang-huong-thuy-xuan.png",
+    image: "/images/villages/huong_tram_thuy_xuan.jpg",
     shortDescription: "Sắc hương cổ kính nhuộm tím ký ức đất Cố đô.",
     description:
       "Nghề làm hương ở Thủy Xuân lưu giữ kỹ thuật pha trầm, se hương và phối sắc thủ công, tạo nên không gian tâm linh đậm chất Huế.",
