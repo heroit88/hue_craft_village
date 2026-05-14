@@ -452,9 +452,12 @@ export function HomePage() {
           {events.map((ev, idx) => (
             <FadeIn key={ev.title} delay={idx * 0.05}>
               <article className="flex flex-col overflow-hidden rounded-lg border border-[#e5d9c8] bg-white shadow-sm sm:flex-row">
-                <div className="flex shrink-0 items-center justify-center bg-[#7b1e1e] px-6 py-6 text-center text-[#f5efe6] sm:w-28 sm:flex-col sm:py-8">
+                <div className="flex shrink-0 flex-col items-center justify-center gap-0.5 bg-[#7b1e1e] px-6 py-6 text-center text-[#f5efe6] sm:w-28 sm:py-8">
                   <span className="font-heading text-3xl leading-none">{ev.day}</span>
                   <span className="text-xs font-semibold uppercase tracking-widest">{ev.month}</span>
+                  <span className="text-xs font-semibold uppercase tracking-widest tabular-nums text-[#f5efe6]">
+                    {ev.sortDate.slice(0, 4)}
+                  </span>
                 </div>
                 <div className="flex flex-1 flex-col justify-center p-5 sm:p-6">
                   <h4 className="font-heading text-xl text-[#2f2018] md:text-2xl">{ev.title}</h4>

@@ -17,7 +17,7 @@ export default function NewsPage() {
         {events.map((item, idx) => (
           <FadeIn key={item.title} delay={idx * 0.08} className="card-luxury p-6">
             <p className="text-xs tracking-[0.2em] text-[#7b1e1e]">
-              {item.day} {item.month} · {item.dateRange}
+              {item.day} {item.month} {item.sortDate.slice(0, 4)} · {item.dateRange}
             </p>
             <h2 className="mt-2 text-3xl">{item.title}</h2>
             <p className="mt-2 text-[#5c4033]/80">{item.location}</p>

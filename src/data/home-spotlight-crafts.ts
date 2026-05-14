@@ -1,6 +1,4 @@
-/** Nội dung & danh mục tham chiếu: https://sites.google.com/view/hue-craft-village/trang-ch%E1%BB%A7 — ảnh thẻ dùng file trong `public/images/villages`. */
-export const hueCraftVillage40Site =
-  "https://sites.google.com/view/hue-craft-village/trang-ch%E1%BB%A7";
+/** Nội dung làng nghề tham chiếu dự án Huế Craft Village 4.0 — lưu trong mã nguồn website; ảnh thẻ trong `public/images/villages`. */
 
 export type HomeSpotlightCraft = {
   name: string;
@@ -11,39 +9,35 @@ export type HomeSpotlightCraft = {
   external?: boolean;
 };
 
-/** Bổ sung khối “Làng nghề nổi bật” trang chủ (chưa có trang chi tiết nội bộ — link Google Sites). */
+/** Bổ sung khối “Làng nghề nổi bật” trang chủ — link trang nội bộ. */
 export const homeFeaturedExtraCrafts: HomeSpotlightCraft[] = [
   {
     name: "Nghề dệt Dèng A Lưới",
     description:
       "Hoa văn dệt thổ cẩm của đồng bào dân tộc thiểu số, phản ánh bản sắc văn hóa vùng miền núi gắn với Huế.",
     image: "/images/villages/det_deng_a_luoi.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/deng-a-luoi",
   },
   {
     name: "Tranh làng Sình",
     description:
       "Dòng tranh dân gian đặc trưng với sắc điệp và đề tài lễ hội, phồn thực đời sống làng quê xứ Huế.",
     image: "/images/villages/tranh-lang-sinh.png",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/tranh-lang-sinh",
   },
   {
     name: "Nghề làm lọng cung đình Huế",
     description:
       "Lọng cố đô với kỹ thuật khung tre, lụa và trang trí cung đình — di sản nghề thủ công đặc sắc Huế.",
     image: "/images/villages/lam-long-cung-dinh-hue.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/long-cung-dinh-hue",
   },
   {
     name: "Nghề làm quạt giấy phố cổ Bao Vinh",
     description:
       "Tinh hoa quạt giấy thủ công — họa tiết thanh nhã, gắn với phố cổ và ký ức thương cảng xưa.",
     image: "/images/villages/quat-giay-bao-vinh.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/quat-giay-bao-vinh",
   },
 ];
 
@@ -67,8 +61,7 @@ export const homeSpotlightCrafts: HomeSpotlightCraft[] = [
     description:
       "Hoa văn dệt thổ cẩm của đồng bào dân tộc thiểu số, phản ánh bản sắc văn hóa vùng miền núi gắn với Huế.",
     image: "/images/villages/det_deng_a_luoi.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/deng-a-luoi",
   },
   {
     name: "Làng gốm Phước Tích",
@@ -82,24 +75,21 @@ export const homeSpotlightCrafts: HomeSpotlightCraft[] = [
     description:
       "Dòng tranh dân gian đặc trưng với sắc điệp và đề tài lễ hội, phồn thực đời sống làng quê xứ Huế.",
     image: "/images/villages/tranh-lang-sinh.png",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/tranh-lang-sinh",
   },
   {
     name: "Nghề làm quạt giấy phố cổ Bao Vinh",
     description:
       "Tinh hoa quạt giấy thủ công — họa tiết thanh nhã, gắn với phố cổ và ký ức thương cảng xưa.",
     image: "/images/villages/quat-giay-bao-vinh.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/quat-giay-bao-vinh",
   },
   {
     name: "Nghề làm lọng cung đình Huế",
     description:
       "Lọng cố đô với kỹ thuật khung tre, lụa và trang trí cung đình — di sản nghề thủ công đặc sắc Huế.",
     image: "/images/villages/lam-long-cung-dinh-hue.jpg",
-    href: hueCraftVillage40Site,
-    external: true,
+    href: "/lang-nghe/long-cung-dinh-hue",
   },
   {
     name: "Làng nghề nón lá xứ Huế",

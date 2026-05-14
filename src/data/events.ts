@@ -5,6 +5,8 @@ export const featuredNews = {
 };
 
 export type EventCard = {
+  /** ISO YYYY-MM-DD — dùng để sắp xếp (ngày mới nhất lên trước) */
+  sortDate: string;
   day: string;
   month: string;
   title: string;
@@ -13,8 +15,9 @@ export type EventCard = {
   location: string;
 };
 
-export const events: EventCard[] = [
+const eventsUnsorted: EventCard[] = [
   {
+    sortDate: "2026-05-15",
     day: "15",
     month: "MAY",
     title: "Festival Huế 2026 – Lễ hội mùa Hạ",
@@ -24,6 +27,7 @@ export const events: EventCard[] = [
     location: "Đại Nội Huế & nhiều không gian di sản",
   },
   {
+    sortDate: "2026-06-13",
     day: "13",
     month: "JUN",
     title: "Tuần lễ Festival Nghệ thuật Quốc tế Huế 2026",
@@ -33,6 +37,7 @@ export const events: EventCard[] = [
     location: "Thành phố Huế",
   },
   {
+    sortDate: "2026-04-28",
     day: "28",
     month: "APR",
     title: "Chương trình “Hoàng cung huyền ảo”",
@@ -42,6 +47,7 @@ export const events: EventCard[] = [
     location: "Đại Nội Huế",
   },
   {
+    sortDate: "2026-06-08",
     day: "08",
     month: "JUN",
     title: "Lễ hội Hoa đăng Huế",
@@ -51,6 +57,7 @@ export const events: EventCard[] = [
     location: "Khu vực sông Hương",
   },
   {
+    sortDate: "2026-07-20",
     day: "20",
     month: "JUL",
     title: "Ngày hội Sen Huế 2026",
@@ -60,6 +67,7 @@ export const events: EventCard[] = [
     location: "Thành phố Huế",
   },
   {
+    sortDate: "2026-04-24",
     day: "24",
     month: "APR",
     title: "Triển lãm phong lan, cây cảnh và đá cảnh ba miền",
@@ -69,6 +77,7 @@ export const events: EventCard[] = [
     location: "Đại Nội Huế",
   },
   {
+    sortDate: "2026-04-18",
     day: "18",
     month: "APR",
     title: "Lễ hội Điện Huệ Nam",
@@ -78,6 +87,7 @@ export const events: EventCard[] = [
     location: "Điện Huệ Nam, Huế",
   },
   {
+    sortDate: "2026-05-12",
     day: "12",
     month: "MAY",
     title: "Chợ quê ngày hội",
@@ -87,3 +97,8 @@ export const events: EventCard[] = [
     location: "Các không gian văn hóa cộng đồng tại Huế",
   },
 ];
+
+/** Ngày mới nhất (theo sortDate) hiển thị trước */
+export const events: EventCard[] = [...eventsUnsorted].sort((a, b) =>
+  b.sortDate.localeCompare(a.sortDate),
+);

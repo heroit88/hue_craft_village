@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "preview:export": "npx --yes serve@14 out -l 3456",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:craft-bundles": "node scripts/build-craft-bundles.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

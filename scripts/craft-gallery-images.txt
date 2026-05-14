@@ -1,0 +1,20 @@
+Ảnh gallery từ Google Sites (lh3.googleusercontent.com) — lưu vào repo
+====================================================================
+
+Script `build-craft-bundles.mjs` cố tải từng ảnh vào:
+  public/images/crafts/<slug-village>/01.jpg (hoặc .webp, .png)
+
+Một số môi trường (máy chủ, IP trung tâm dữ liệu) bị Google trả 403.
+Khi đó bundle vẫn dùng đường dẫn nội bộ; nếu không có file nào tải được,
+script sẽ dùng tạm ảnh hero làng (`/images/villages/...`) làm 1 ảnh minh họa.
+
+Cách lấy đủ ảnh Sites vào repo (một lần, trên máy cá nhân thường ổn định hơn):
+
+  1. Chạy:  node scripts/build-craft-bundles.mjs
+  2. Nếu vẫn toàn 403: mở từng URL ảnh trong trình duyệt đã đăng nhập Google,
+     lưu thủ công vào public/images/crafts/<slug>/ theo thứ tự 01, 02, ...
+  3. Hoặc chỉnh script để dùng cookie/phiên bản curl khác (tùy chính sách của bạn).
+
+Slug thư mục trùng `villageSlug` trong META của build script, ví dụ:
+  lang-huong-thuy-xuan, gom-phuoc-tich, deng-a-luoi, tranh-lang-sinh,
+  quat-giay-bao-vinh, long-cung-dinh-hue, hoa-giay-thanh-tien

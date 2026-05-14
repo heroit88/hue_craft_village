@@ -7,8 +7,19 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+/** Trang tĩnh dưới `lang-nghe/<slug>/` thay cho `[slug]` */
+const SLUGS_STATIC_PAGE = new Set([
+  "hoa-giay-thanh-tien",
+  "lang-huong-thuy-xuan",
+  "gom-phuoc-tich",
+  "deng-a-luoi",
+  "tranh-lang-sinh",
+  "quat-giay-bao-vinh",
+  "long-cung-dinh-hue",
+]);
+
 export function generateStaticParams() {
-  return villages.map((v) => ({ slug: v.slug }));
+  return villages.filter((v) => !SLUGS_STATIC_PAGE.has(v.slug)).map((v) => ({ slug: v.slug }));
 }
 
 export default async function VillageDetailPage({ params }: Props) {
